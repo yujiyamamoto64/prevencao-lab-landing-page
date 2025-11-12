@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratório Prevenção - Resultados de Exames</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow fixed w-full z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+            <h1 class="text-2xl font-bold text-red-700">Laboratório Prevenção</h1>
+            <nav class="space-x-6 text-sm font-medium">
+                <a href="#inicio" class="hover:text-red-700">Início</a>
+                <a href="#resultados" class="hover:text-red-700">Resultados</a>
+                <a href="#sobre" class="hover:text-red-700">Sobre</a>
+                <a href="#contato" class="hover:text-red-700">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Início -->
+    <section id="inicio" class="pt-28 pb-20 text-center bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-gray-800">
+                Cuidando da sua saúde com tecnologia e precisão
+            </h2>
+            <p class="text-gray-600 mb-8 text-lg">
+                Resultados confiáveis, atendimento humanizado e exames laboratoriais de ponta.
+            </p>
+            <a href="#resultados" class="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-lg font-medium">
+                Ver Resultados de Exames
+            </a>
+        </div>
+    </section>
+
+    <!-- Resultados de Exames -->
+    <section id="resultados" class="py-20 bg-white text-center">
+        <h3 class="text-3xl font-bold text-red-700 mb-6">Resultados de Exames</h3>
+        <p class="text-gray-600 mb-8">Digite seu CNPJ e senha para acessar seus resultados.</p>
+
+        <div class="flex justify-center">
+            <iframe frameborder="0" src="https://app.lifesys.com.br/laudos/plugin" width="360" height="320"
+                class="shadow-lg rounded-lg border border-gray-200">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-4 text-gray-800">Sobre o Laboratório</h3>
+            <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
+                O <strong>Laboratório Prevenção</strong> atua há mais de 20 anos oferecendo serviços de diagnóstico
+                laboratorial com precisão, agilidade e excelência.
+                Nossos profissionais são altamente qualificados e utilizam tecnologia de ponta para garantir resultados
+                confiáveis e rápidos.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <h4 class="text-xl font-semibold text-red-700 mb-2">Exames Laboratoriais</h4>
+                    <p class="text-gray-600">Coletas e análises realizadas com equipamentos de última geração.</p>
+                </div>
+                <div class="p-6 bg-red-700 text-white rounded-lg shadow">
+                    <h4 class="text-xl font-semibold mb-2">Atendimento Humanizado</h4>
+                    <p>Equipe atenciosa e pronta para oferecer conforto e segurança em cada etapa do exame.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <h4 class="text-xl font-semibold text-red-700 mb-2">Laudos Online</h4>
+                    <p class="text-gray-600">Acesse seus resultados de forma prática e segura pelo nosso portal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 text-center">
+        <h3 class="text-3xl font-bold mb-4 text-red-700">Fale Conosco</h3>
+        <p class="text-gray-600 mb-8">Entre em contato para agendamentos, dúvidas e informações.</p>
+
+        <div class="space-y-4">
+            <p class="text-lg">📍 Rua Exemplo, 123 - Goiânia, GO</p>
+            <p class="text-lg">📞 (62) 99999-9999</p>
+            <a href="https://wa.me/5562999999999" target="_blank"
+                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold">
+                Fale pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-red-700 text-white py-6 text-center">
+        <p>© 2025 Laboratório Prevenção. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -7,12 +7,59 @@
     <title>Laboratório Prevenção - Resultados de Exames</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        :root {
+            --brand-primary: #e3063c;
+            --brand-dark: #b0042c;
+            --brand-light: #fff1f5;
+            --brand-muted: #fde1ea;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
         }
 
         html {
             scroll-behavior: smooth;
+        }
+
+        .bg-brand {
+            background-color: var(--brand-primary) !important;
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark) !important;
+        }
+
+        .bg-brand-soft {
+            background-color: var(--brand-light);
+        }
+
+        .text-brand {
+            color: var(--brand-primary) !important;
+        }
+
+        .border-brand {
+            border-color: var(--brand-primary) !important;
+        }
+
+        .hover-brand:hover {
+            color: var(--brand-primary) !important;
+        }
+
+        .hover-bg-brand-dark:hover {
+            background-color: var(--brand-dark) !important;
+        }
+
+        .hover-border-brand:hover {
+            border-color: var(--brand-primary) !important;
+        }
+
+        .brand-accent-bar {
+            background-color: var(--brand-primary);
+        }
+
+        .brand-dot {
+            color: var(--brand-primary);
         }
     </style>
 </head>
@@ -22,24 +69,28 @@
     <!-- Cabeçalho -->
     <header class="bg-white shadow fixed w-full z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-            <h1 class="text-2xl font-bold text-red-700">Laboratório Prevenção</h1>
+            <div class="flex items-center gap-3">
+                <img src="LABORATORIO-CLINICO-PREVENCAO.webp" alt="Laboratório Prevenção"
+                    class="h-12 w-auto object-contain" />
+                <h1 class="text-2xl font-bold text-brand">Laboratório Prevenção</h1>
+            </div>
             <div class="flex items-center gap-6">
-                <nav class="space-x-6 text-sm font-medium">
-                    <a href="#inicio" class="hover:text-red-700">Início</a>
-                    <a href="#resultados" class="hover:text-red-700">Resultados</a>
-                    <a href="#sobre" class="hover:text-red-700">Sobre</a>
-                    <a href="#contato" class="hover:text-red-700">Contato</a>
+                <nav class="space-x-6 text-sm font-medium text-gray-700">
+                    <a href="#inicio" class="hover-brand">Início</a>
+                    <a href="#resultados" class="hover-brand">Resultados</a>
+                    <a href="#sobre" class="hover-brand">Sobre</a>
+                    <a href="#contato" class="hover-brand">Contato</a>
                 </nav>
                 <div class="hidden md:flex items-center gap-3 text-gray-500">
                     <a href="https://www.facebook.com/laboratorioprevencao/" target="_blank" rel="noopener"
-                        class="p-2 border border-gray-200 rounded-full hover:text-red-700 hover:border-red-200 transition"
+                        class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
                         aria-label="Facebook do Laboratório Prevenção">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M14 3h4a1 1 0 011 1v3h-3a2 2 0 00-2 2v2h4l-1 4h-3v7h-4v-7H8v-4h3V9a4 4 0 014-4z" />
                         </svg>
                     </a>
                     <a href="https://www.instagram.com/laboratorio_prevencao/" target="_blank" rel="noopener"
-                        class="p-2 border border-gray-200 rounded-full hover:text-red-700 hover:border-red-200 transition"
+                        class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
                         aria-label="Instagram do Laboratório Prevenção">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -52,7 +103,7 @@
     </header>
 
     <!-- Início -->
-    <section id="inicio" class="pt-28 pb-20 text-center bg-gray-50">
+    <section id="inicio" class="pt-28 pb-20 text-center bg-brand-soft">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl font-bold mb-4 text-gray-800">
                 Cuidando da sua saúde com tecnologia e precisão
@@ -60,7 +111,7 @@
             <p class="text-gray-600 mb-8 text-lg">
                 Resultados confiáveis, atendimento humanizado e exames laboratoriais de ponta.
             </p>
-            <a href="#resultados" class="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-lg font-medium">
+            <a href="#resultados" class="bg-brand hover-bg-brand-dark text-white px-6 py-3 rounded-lg font-medium">
                 Ver Resultados de Exames
             </a>
         </div>
@@ -68,7 +119,7 @@
 
     <!-- Resultados de Exames -->
     <section id="resultados" class="py-20 bg-white text-center">
-        <h3 class="text-3xl font-bold text-red-700 mb-6">Resultados de Exames</h3>
+        <h3 class="text-3xl font-bold text-brand mb-6">Resultados de Exames</h3>
         <p class="text-gray-600 mb-8">Digite seu CNPJ e senha para acessar seus resultados.</p>
 
         <div class="flex justify-center">
@@ -78,7 +129,7 @@
         </div>
     </section>
 
-    <!-- Institucional -->
+    <!-- Sobre / Institucional -->
     <section id="sobre" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-12 text-left">
@@ -88,7 +139,7 @@
                             Nossa<br />
                             História
                         </h3>
-                        <span class="block w-16 h-1 bg-pink-500 mt-3"></span>
+                        <span class="block w-16 h-1 brand-accent-bar mt-3"></span>
                     </div>
                     <p class="text-gray-600">
                         O Laboratório Prevenção, com mais de 30 anos dedicados à saúde, abriu sua primeira unidade em
@@ -113,7 +164,7 @@
                             Controle de<br />
                             Qualidade
                         </h3>
-                        <span class="block w-16 h-1 bg-pink-500 mt-3"></span>
+                        <span class="block w-16 h-1 brand-accent-bar mt-3"></span>
                     </div>
                     <p class="text-gray-600">
                         Todos os meses nossos laboratórios passam por um rigoroso controle de qualidade realizado pelos
@@ -131,7 +182,7 @@
                             Seja um dos<br />
                             Nossos Parceiros
                         </h3>
-                        <span class="block w-16 h-1 bg-pink-500 mt-3"></span>
+                        <span class="block w-16 h-1 brand-accent-bar mt-3"></span>
                     </div>
                     <p class="text-gray-600">
                         Ser um parceiro do Laboratório Prevenção significa unir-se a um dos mais respeitados
@@ -144,13 +195,13 @@
                     </p>
                     <div>
                         <p class="font-semibold text-gray-900 mb-2">Temos parcerias com:</p>
-                        <div class="flex flex-wrap items-center gap-4 text-red-600 font-semibold">
+                        <div class="flex flex-wrap items-center gap-4 text-brand font-semibold">
                             <span class="flex items-center gap-2"><span
-                                    class="text-pink-500 text-xl">•</span>Convênios</span>
+                                    class="brand-dot text-xl">&bull;</span>Convênios</span>
                             <span class="flex items-center gap-2"><span
-                                    class="text-pink-500 text-xl">•</span>Médicos</span>
+                                    class="brand-dot text-xl">&bull;</span>Médicos</span>
                             <span class="flex items-center gap-2"><span
-                                    class="text-pink-500 text-xl">•</span>Clínicas</span>
+                                    class="brand-dot text-xl">&bull;</span>Clínicas</span>
                         </div>
                     </div>
                 </article>
@@ -160,8 +211,9 @@
 
     <!-- Contato -->
     <section id="contato" class="py-16 text-center">
-        <h3 class="text-3xl font-bold mb-4 text-red-700">Fale Conosco</h3>
-        <p class="text-gray-600 mb-8">Entre em contato para agendamentos, dúvidas e informações.</p>
+        <h3 class="text-3xl font-bold mb-4 text-brand">Fale Conosco</h3>
+        <p class="text-gray-600 mb-8">Entre em contato para agendamentos, dúvidas e informações.
+        </p>
 
         <div class="space-y-4">
             <p class="text-lg">📍 Rua Exemplo, 123 - Goiânia, GO</p>
@@ -174,7 +226,7 @@
     </section>
 
     <!-- Rodapé -->
-    <footer class="bg-red-700 text-white py-6 text-center">
+    <footer class="bg-brand text-white py-6 text-center">
         <p>© 2025 Laboratório Prevenção. Todos os direitos reservados.</p>
     </footer>
 

@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laboratório Prevenção - Resultados de Exames</title>
+    <title>Laboratorio Prevencao - Resultados de Exames</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         :root {
@@ -66,32 +66,37 @@
 
 <body class="bg-white text-gray-800">
 
-    <!-- Cabeçalho -->
+    <!-- Cabecalho -->
     <header class="bg-white shadow fixed w-full z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
             <div class="flex items-center gap-3">
-                <img src="prevencao-lab-logo.png" alt="Laboratório Prevenção" class="h-12 w-auto object-contain" />
-                <h1 class="text-2xl font-bold text-brand">Laboratório Prevenção</h1>
+                <img src="prevencao-lab-logo.png" alt="Laboratorio Prevencao" class="h-12 w-auto object-contain" />
+                <div>
+                    <p class="text-sm text-gray-500">Laboratorio de Citopatologia e Patologia de Goiania</p>
+                    <h1 class="text-2xl font-bold text-brand leading-tight">Laboratorio Prevencao</h1>
+                </div>
             </div>
             <div class="flex items-center gap-6">
-                <nav class="space-x-6 text-sm font-medium text-gray-700">
-                    <a href="#inicio" class="hover-brand">Início</a>
+                <nav class="space-x-4 md:space-x-6 text-sm font-medium text-gray-700">
+                    <a href="#inicio" class="hover-brand">Inicio</a>
                     <a href="#resultados" class="hover-brand">Resultados</a>
-                    <a href="#sobre" class="hover-brand">Sobre</a>
+                    <a href="#exames" class="hover-brand">Exames</a>
+                    <a href="#sobre" class="hover-brand">Quem somos</a>
                     <a href="#unidades" class="hover-brand">Unidades</a>
+                    <a href="#parcerias" class="hover-brand">Parcerias</a>
                     <a href="#contato" class="hover-brand">Contato</a>
                 </nav>
                 <div class="hidden md:flex items-center gap-3 text-gray-500">
                     <a href="https://www.facebook.com/laboratorioprevencao/" target="_blank" rel="noopener"
                         class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
-                        aria-label="Facebook do Laboratório Prevenção">
+                        aria-label="Facebook do Laboratorio Prevencao">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M14 3h4a1 1 0 011 1v3h-3a2 2 0 00-2 2v2h4l-1 4h-3v7h-4v-7H8v-4h3V9a4 4 0 014-4z" />
                         </svg>
                     </a>
                     <a href="https://www.instagram.com/laboratorio_prevencao/" target="_blank" rel="noopener"
                         class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
-                        aria-label="Instagram do Laboratório Prevenção">
+                        aria-label="Instagram do Laboratorio Prevencao">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm11 1a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 11-5 5 5 5 0 015-5zm0 2a3 3 0 103 3 3 3 0 00-3-3z" />
@@ -102,266 +107,370 @@
         </div>
     </header>
 
-    <!-- Início -->
+    <!-- Inicio -->
     <section id="inicio" class="pt-28 pb-20 text-center bg-brand-soft">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl font-bold mb-4 text-gray-800">
-                Cuidando da sua saúde com tecnologia e precisão
+                Cuidando da sua saude com tecnologia e precisao
             </h2>
             <p class="text-gray-600 mb-8 text-lg">
-                Resultados confiáveis, atendimento humanizado e exames laboratoriais de ponta.
+                Resultados confiaveis, atendimento humanizado e exames laboratoriais de ponta.
             </p>
-            <a href="#resultados" class="bg-brand hover-bg-brand-dark text-white px-6 py-3 rounded-lg font-medium">
-                Ver Resultados de Exames
-            </a>
+            <div class="flex justify-center gap-3 flex-wrap">
+                <a href="#resultados"
+                    class="bg-brand hover-bg-brand-dark text-white px-6 py-3 rounded-lg font-medium shadow">
+                    Ver Resultados de Exames
+                </a>
+                <a href="#unidades" class="px-6 py-3 rounded-lg font-medium border border-brand text-brand">
+                    Encontrar Unidade
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Resultados de Exames -->
     <section id="resultados" class="py-20 bg-white text-center">
-        <h3 class="text-3xl font-bold text-brand mb-6">Resultados de Exames</h3>
-        <p class="text-gray-600 mb-8">Resultados precisos, atendimento humanizado e tecnologia laboratorial de
-            excelência.</p>
-        <p class="text-gray-600 mb-8">Digite seu CNPJ e senha para acessar seus resultados.</p>
-
-        <div class="flex justify-center">
-            <iframe src="https://worklabweb.com.br/frame.php?Cliente=972&i=1" name="I1" width="450" height="135"
-                marginwidth="0" marginheight="0" frameborder="no" target="_self" scrolling="no"
-                class="shadow-lg rounded-lg border border-gray-200">
-            </iframe>
+        <div class="max-w-5xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-brand mb-4">Resultados de Exames</h3>
+            <p class="text-gray-600 mb-6">Acesse o portal, insira CNPJ e senha e consulte seus laudos com seguranca.</p>
+            <div class="flex justify-center flex-wrap gap-4 mb-8">
+                <a href="https://worklabweb.com.br/frame.php?Cliente=972&i=1" target="_blank" rel="noopener"
+                    class="inline-flex items-center gap-2 bg-brand hover-bg-brand-dark text-white px-5 py-3 rounded-lg font-semibold shadow">
+                    Abrir portal de resultados
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12.293 2.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-7 7A1 1 0 019.5 15H6a1 1 0 01-1-1V10.5a1 1 0 01.293-.707l7-7zM5 18a1 1 0 100-2 1 1 0 000 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <span class="text-sm text-gray-500 self-center">Plugin integrado via WorkLab</span>
+            </div>
+            <div class="flex justify-center">
+                <iframe src="https://worklabweb.com.br/frame.php?Cliente=972&i=1" name="I1" width="450" height="135"
+                    marginwidth="0" marginheight="0" frameborder="no" target="_self" scrolling="no"
+                    class="shadow-lg rounded-lg border border-gray-200">
+                </iframe>
+            </div>
         </div>
     </section>
 
-    <!-- Sobre / Institucional -->
-    <section id="sobre" class="py-20 bg-white">
+    <!-- Exames -->
+    <section id="exames" class="py-20 bg-brand-soft">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12 text-left">
-                <article class="space-y-4">
-                    <div>
-                        <h3 class="text-3xl font-bold text-gray-900 leading-tight">
-                            Nossa<br />
-                            História
-                        </h3>
-                        <span class="block w-16 h-1 brand-accent-bar mt-3"></span>
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-3">Exames</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto">Precisao e confianca em cada resultado laboratorial. Conheca
+                    as areas em que atuamos.</p>
+            </div>
+            <div class="grid gap-6 md:grid-cols-3">
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 3h6m-2 0v13m0 0a2 2 0 11-4 0V7m4 9a2 2 0 004 0V7m-8 5a2 2 0 01-4 0V7" />
+                        </svg>
                     </div>
-                    <p class="text-gray-600">
-                        Com mais de 38 anos de atuação, o Laboratório de Citopatologia e Patologia de Goiânia é
-                        referência em serviços de anatomopatologia, citologia, análises clínicas, DNA, exames
-                        toxicológicos nos estados de Goiás e Mato Grosso.
-                    </p>
-                    <p class="text-gray-600">
-                        Fundado em 1989, o laboratório iniciou suas atividades com o compromisso de oferecer um serviço
-                        técnico-científico de excelência, consolidando-se como sinônimo de confiança, qualidade e
-                        responsabilidade médica.
-                    </p>
-                    <p class="text-gray-600">
-                        O crescimento da instituição é resultado da confiança de seus parceiros, clientes e instituições
-                        públicas que reconhecem sua seriedade e competência.
-                    </p>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Analises clinicas</h4>
+                    <p class="text-gray-600">Precisao e confianca em cada resultado laboratorial.</p>
                 </article>
-
-                <article class="space-y-4">
-                    <div>
-                        <h3 class="text-3xl font-bold text-gray-900 leading-tight">
-                            Controle de<br />
-                            Qualidade
-                        </h3>
-                        <span class="block w-16 h-1 brand-accent-bar mt-3"></span>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 9.75L4.5 4.5m0 0l2.25-2.25m-2.25 2.25l2.25 2.25M14.25 14.25l5.25 5.25m0 0l-2.25 2.25m2.25-2.25l-2.25-2.25M9 10.5h6m-6 3h6" />
+                        </svg>
                     </div>
-                    <p class="text-gray-600">
-                        Todos os meses nossos laboratórios passam por um rigoroso controle de qualidade realizado pelos
-                        principais órgãos regulatórios do país.
-                    </p>
-                    <div class="pt-4 flex justify-center">
-                        <img src="controle.webp" alt="Logos dos órgãos regulatórios parceiros do Laboratório Prevenção"
-                            class="max-w-xs w-full object-contain" />
-                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Anatomia patologica</h4>
+                    <p class="text-gray-600">Diagnosticos seguros por meio da analise histologica de tecidos.</p>
                 </article>
-
-                <article class="space-y-4">
-                    <div>
-                        <h3 class="text-3xl font-bold text-gray-900 leading-tight">
-                            Seja um dos<br />
-                            Nossos Parceiros
-                        </h3>
-                        <span class="block w-16 h-1 brand-accent-bar mt-3"></span>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v12m6-6H6m10-4a2 2 0 10-4 0 2 2 0 004 0zm-6 8a2 2 0 104 0 2 2 0 00-4 0z" />
+                        </svg>
                     </div>
-                    <p class="text-gray-600">
-                        Ser um parceiro do Laboratório Prevenção significa unir-se a um dos mais respeitados
-                        laboratórios do Centro-Oeste.
-                    </p>
-                    <p class="text-gray-600">
-                        Garantimos o nosso compromisso com a qualidade e excelência que dedicamos a todos os nossos
-                        processos, desde o atendimento aos clientes à análise dos materiais coletados e liberação dos
-                        laudos.
-                    </p>
-                    <div>
-                        <p class="font-semibold text-gray-900 mb-2">Temos parcerias com:</p>
-                        <div class="flex flex-wrap items-center gap-4 text-brand font-semibold">
-                            <span class="flex items-center gap-2"><span
-                                    class="brand-dot text-xl">&bull;</span>Convênios</span>
-                            <span class="flex items-center gap-2"><span
-                                    class="brand-dot text-xl">&bull;</span>Médicos</span>
-                            <span class="flex items-center gap-2"><span
-                                    class="brand-dot text-xl">&bull;</span>Clínicas</span>
-                        </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Citologia</h4>
+                    <p class="text-gray-600">Avaliacao celular detalhada para deteccao precoce de alteracoes.</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 5a2.25 2.25 0 014.5 0v6a2.25 2.25 0 01-4.5 0V5zM5.25 13.5a2.25 2.25 0 014.5 0v2.25a2.25 2.25 0 01-4.5 0V13.5zM14.25 12a2.25 2.25 0 014.5 0v5.25a2.25 2.25 0 01-4.5 0V12z" />
+                        </svg>
                     </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Toxicologia</h4>
+                    <p class="text-gray-600">Identificacao de substancias e monitoramento da exposicao quimica.</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 4c4 4 4 8 0 12m10-12c-4 4-4 8 0 12M7 4h10m-10 12h10" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Genetica</h4>
+                    <p class="text-gray-600">Investigacao de alteracoes geneticas para prevencao e diagnostico
+                        personalizado.</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Biologia molecular</h4>
+                    <p class="text-gray-600">Tecnologia molecular a servico do diagnostico de alta sensibilidade.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
-    <section id="contato" class="py-16 text-center">
-        <h3 class="text-3xl font-bold mb-4 text-brand">Fale Conosco</h3>
-        <p class="text-gray-600 mb-8">Entre em contato para agendamentos, dúvidas e informações.
-        </p>
+    <!-- Quem somos -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-5">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-900 leading-tight">Quem somos nos</h3>
+                        <span class="block w-16 h-1 brand-accent-bar mt-3"></span>
+                    </div>
+                    <p class="text-gray-700">
+                        Com mais de 38 anos de atuacao, o Laboratorio de Citopatologia e Patologia de Goiania e
+                        referencia em servicos de anatomopatologia, citologia, analises clinicas, DNA e exames
+                        toxicologicos nos estados de Goias e Mato Grosso.
+                    </p>
+                    <p class="text-gray-700">
+                        Fundado em 1989, o laboratorio iniciou suas atividades com o compromisso de oferecer um servico
+                        tecnico-cientifico de excelencia, consolidando-se como sinonimo de confianca, qualidade e
+                        responsabilidade medica.
+                    </p>
+                    <p class="text-gray-700">
+                        O crescimento da instituicao e resultado da confianca de seus parceiros, clientes e instituicoes
+                        publicas que reconhecem sua seriedade e competencia.
+                    </p>
+                    <div class="flex gap-4 flex-wrap">
+                        <div class="px-4 py-3 rounded-lg bg-brand-soft border border-brand text-brand font-semibold">
+                            +38 anos de atuacao
+                        </div>
+                        <div class="px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-700">
+                            Compromisso com excelencia tecnico-cientifica
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-6 bg-brand-soft border border-brand rounded-xl">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Controle de Qualidade</h4>
+                        <p class="text-gray-700">
+                            Todos os meses nossos laboratorios passam por um rigoroso controle de qualidade realizado
+                            pelos principais orgaos regulatorios do pais.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <img src="38anos.png" alt="38 anos de Laboratorio Prevencao"
+                                class="h-20 w-auto object-contain">
+                            <div>
+                                <p class="text-sm text-gray-500">Desde 1989</p>
+                                <p class="text-xl font-semibold text-gray-900">Confianca, qualidade e responsabilidade
+                                    medica.</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-sm text-gray-600">
+                            <p>Presenca em Goias e Mato Grosso, com tecnologia e atendimento humanizado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <div class="space-y-4">
-            <p class="text-lg">📍 Av. Paranaíba, 1323 - St. Central, Goiânia - GO, 74025-010</p>
-            <p class="text-lg">📞 (62) 3213-6888</p>
-            <a href="https://wa.me/5562999999999" target="_blank"
-                class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold">
-                Fale pelo WhatsApp
-            </a>
+    <!-- Parcerias -->
+    <section id="parcerias" class="py-20 bg-brand-soft">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-3">Parcerias</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto">Colaboracao com unidades publicas, convenios e clinicas para
+                    levar diagnostico laboratorial de excelencia.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Unidades Publicas</h4>
+                    <p class="text-gray-700 mb-4">Colaboracao com prefeituras, secretarias de saude e unidades publicas,
+                        levando diagnostico laboratorial de excelencia ao sistema SUS.</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Prefeitura de Aragarcas (GO) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Formosa (GO) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Goiania (GO) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Luziania (GO) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Cidade Ocidental (GO) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Cocalinho (MT) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Campinapolis (MT) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Canarana (MT) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Nova Nazare (MT) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Paranatinga (MT) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Sao Jose do Povo (MT) - Secretaria Municipal de Saude</li>
+                        <li>Prefeitura de Tesouro (MT) - Secretaria Municipal de Saude</li>
+                    </ul>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Convenios e Instituicoes Privadas</h4>
+                    <p class="text-gray-700 mb-4">Convenios da empresa - lista completa e sem repeticoes.</p>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-900 mb-2">SUS</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
+                                <span>SUS Querencia</span>
+                                <span>SUS Campinapolis</span>
+                                <span>SUS Cocalinho</span>
+                                <span>SUS Espigao do Leste</span>
+                                <span>SUS Paranatinga</span>
+                                <span>SUS Canarana</span>
+                                <span>SUS Goiania</span>
+                                <span>SUS Luziania</span>
+                                <span>SUS Formosa</span>
+                                <span>SUS Sao Jose do Povo</span>
+                                <span>SUS Agua Boa</span>
+                                <span>SUS Aragarcas</span>
+                                <span>SUS Cidade Ocidental</span>
+                                <span>SUS Nova Nazare</span>
+                                <span>SUS Valparaiso</span>
+                                <span>SUS Tesouro</span>
+                                <span>SUS Turvelandia</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900 mb-2">Convenios e Clinicas</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
+                                <span>CASSI Saude</span>
+                                <span>Clinica Araguaia</span>
+                                <span>Clinica do Trabalho</span>
+                                <span>Clinica Santa Luzia</span>
+                                <span>Maxima Ocupacional</span>
+                                <span>KATO</span>
+                                <span>SGPREV</span>
+                                <span>Casa do Indio - Querencia</span>
+                                <span>Unimed MT</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Seja um Parceiro</h4>
+                    <p class="text-gray-700 mb-6">
+                        Deseja firmar uma parceria com o nosso laboratorio? Entre em contato e descubra como podemos
+                        construir juntos um modelo de diagnostico eficiente e acessivel.
+                    </p>
+                    <a href="#contato"
+                        class="inline-flex items-center justify-center gap-2 bg-brand hover-bg-brand-dark text-white px-5 py-3 rounded-lg font-semibold shadow">
+                        Falar com o time de parcerias
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12.293 3.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-8.5 8.5a1 1 0 01-.5.263l-5 1a1 1 0 01-1.183-1.184l1-5a1 1 0 01.263-.5l8.5-8.5zM11 6l3 3"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </article>
+            </div>
         </div>
     </section>
 
     <!-- Unidades -->
-    <section id="unidades" class="py-20 bg-brand-soft">
+    <section id="unidades" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto">
                 <h3 class="text-3xl font-bold text-gray-900 mb-4">Nossas Unidades</h3>
-                <p class="text-gray-600">Conheça nossas unidades e fique ainda mais perto do cuidado que você merece.
-                </p>
-                <button id="toggle-estado"
-                    class="mt-8 inline-flex items-center gap-2 bg-brand text-white px-6 py-3 rounded-lg font-semibold hover-bg-brand-dark transition">
-                    Mostrar endereços de MT
-                </button>
-                <p class="text-gray-500 text-sm mt-3">Exibindo endereços de <span id="estado-atual"
+                <p class="text-gray-600">Conheca nossas unidades, onde estrutura moderna e atendimento humanizado se
+                    unem a tecnologia e precisao para oferecer excelencia em diagnostico.</p>
+                <div class="mt-8 inline-flex bg-brand-soft rounded-full p-1 border border-brand">
+                    <button data-estado-btn="GO"
+                        class="px-5 py-2 rounded-full text-sm font-semibold bg-brand text-white border border-brand">
+                        Goias
+                    </button>
+                    <button data-estado-btn="MT"
+                        class="px-5 py-2 rounded-full text-sm font-semibold bg-white text-gray-700 border border-transparent">
+                        Mato Grosso
+                    </button>
+                </div>
+                <p class="text-gray-500 text-sm mt-3">Exibindo enderecos de <span id="estado-atual"
                         class="font-semibold text-brand">GO</span></p>
             </div>
             <div id="lista-unidades" class="mt-10 grid gap-6 md:grid-cols-2">
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Água Boa</h4>
-                    <p class="text-gray-700">Rua 03, nº 955, Centro II, Água Boa - MT, CEP 78635-000</p>
-                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 99951-9569</p>
-                </article>
+                <!-- GO -->
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Aragarças</h4>
-                    <p class="text-gray-700">Rua José Martins Costa, nº 127, Setor Ceará, Aragarças - GO, CEP 76240-000
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Aragarcas</h4>
+                    <p class="text-gray-700">Rua Jose Martins Costa, n 127, Setor Ceara, Aragarcas - GO, CEP 76240-000
                     </p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Canarana</h4>
-                    <p class="text-gray-700">Av. Paraná, nº 133, Setor Central, Canarana - MT, CEP 78640-000</p>
-                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 99620-1303</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Cocalinho</h4>
-                    <p class="text-gray-700">Rua Alceu Bezerra Vilarins, S/N, Cocalinho - MT, CEP 78680-000</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Clínica Sírius - Água Boa</h4>
-                    <p class="text-gray-700">Rua 03, nº 1.074, Centro II, Água Boa - MT, CEP 78635-000</p>
-                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 98432-3091</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
                     <h4 class="text-xl font-semibold text-gray-900 mb-2">Cidade Ocidental</h4>
-                    <p class="text-gray-700">Rua SQ12, nº 50, Centro, Cidade Ocidental - GO, CEP 72880-494</p>
+                    <p class="text-gray-700">Rua SQ12, n 50, Centro, Cidade Ocidental - GO, CEP 72880-494</p>
                     <p class="text-sm text-gray-500 mt-2">Telefone: (61) 3625-3616</p>
                 </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Campinápolis</h4>
-                    <p class="text-gray-700">Rua Bandeirantes, S/N, Cristalino, Campinápolis - MT, CEP 78630-000</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Espigão do Leste</h4>
-                    <p class="text-gray-700">Av. Espigão do Leste, Distrito, São Félix do Araguaia - MT, CEP 78673-000
-                    </p>
-                </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Formosa Municipal</h4>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Formosa</h4>
                     <p class="text-gray-700">Rua Albino Abadio de Oliveira, Parque Laguna II, Formosa - GO</p>
-                    <p class="text-sm text-gray-500 mt-2">Telefone: (61) 3631-4815</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefones: (61) 3432-246 / (61) 99695-0803</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Goiânia - Unidade Central</h4>
-                    <p class="text-gray-700">Av. Paranaíba, 1323, Setor Central, Goiânia - GO, CEP 74025-010</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital Canarana</h4>
-                    <p class="text-gray-700">Av. Santa Catarina, S/N, Setor Central, Canarana - MT, CEP 78640-000</p>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Goiania - Unidade Central</h4>
+                    <p class="text-gray-700">Av. Paranaiba, 1323 - St. Central, Goiania - GO, CEP 74025-010</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefones: (62) 3213-6888 / (62) 9 99312-6354</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital e Maternidade Dona Íris</h4>
-                    <p class="text-gray-700">Alameda Emílio Póvoa, 165, Vila Redenção, Goiânia - GO, CEP 74845-250</p>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital e Maternidade Dona Iris</h4>
+                    <p class="text-gray-700">Alameda Emilio Povoa, 165 - Vila Redencao, Goiania - GO, CEP 74845-250</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital e Maternidade Nascer Cidadão</h4>
-                    <p class="text-gray-700">Avenida Oriente, Área 9, S/N, Jardim Curitiba 3, Goiânia - GO, CEP
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital e Maternidade Nascer Cidadao</h4>
+                    <p class="text-gray-700">Avenida Oriente, Area 9, s/n, Jardim Curitiba 3, Goiania - GO, CEP
                         74481-340</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital de Cidade Ocidental</h4>
-                    <p class="text-gray-700">Rua SQ 10, nº S/N, Qd 08, Centro, Cidade Ocidental - GO, CEP 72880-000</p>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital Municipal de Cidade Ocidental</h4>
+                    <p class="text-gray-700">Rua SQ 10, n S/N, Qd 08, Centro, Cidade Ocidental - GO, CEP 72880-000</p>
                     <p class="text-sm text-gray-500 mt-2">Telefone: (61) 3625-4335</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Jardim Ingá - Luziânia</h4>
-                    <p class="text-gray-700">Av. Israel Pinheiro Machado, S/N, Jardim Ingá, Luziânia - GO, CEP 72800-970
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital Municipal do Jardim Inga</h4>
+                    <p class="text-gray-700">Av. Israel Pinheiro Machado, S/N, Jardim Inga, Luziania - GO, CEP 72800-970
                     </p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Luziânia Central</h4>
-                    <p class="text-gray-700">Av. Joventino Rodrigues, Quadra A, Lote 1, Santa Luzia, Luziânia - GO, CEP
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Luziania Central</h4>
+                    <p class="text-gray-700">Av. Joventino Rodrigues, Quadra A, Lote 1, Santa Luzia, Luziania - GO, CEP
                         72803-010</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Nova Nazaré</h4>
-                    <p class="text-gray-700">Rua Cleuza Borba Maciel, S/N, Setor Sul, Nova Nazaré - MT, CEP 78638-000
-                    </p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Paranatinga - Unidade Municipal</h4>
-                    <p class="text-gray-700">Rua Osvaldo Cândido Pereira, S/N, Setor Central, Paranatinga - MT, CEP
-                        78870-000</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">PSF Paranatinga</h4>
-                    <p class="text-gray-700">Rua Rondônia, ESF 7, Santiago do Norte, Paranatinga - MT, CEP 78874-600</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Querência</h4>
-                    <p class="text-gray-700">Avenida Norte, nº 908, Sala 3/4, Expansão Urbana, Querência - MT, CEP
-                        78643-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (61) 99196-0494</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Regional Luziânia</h4>
-                    <p class="text-gray-700">Avenida Alfredo Nasser, S/N, Parque Estrela Dalva VII, Luziânia - GO, CEP
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital Estadual de Luziania</h4>
+                    <p class="text-gray-700">Avenida Alfredo Nasser, s/n, Parque Estrela Dalva VII, Luziania - GO, CEP
                         72820-200</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">São José do Povo</h4>
-                    <p class="text-gray-700">Rua Cândido Borges Leal, nº 1030, Centro, São José do Povo - MT, CEP
-                        78773-000</p>
-                </article>
-                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Tesouro</h4>
-                    <p class="text-gray-700">Rua Dr. Humberto Marcílio, nº 158, Centro, Tesouro - MT, CEP 78775-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (61) 4042-9922</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Turvelândia</h4>
-                    <p class="text-gray-700">Rua Maria Moreira Nascimento, Quadra 09, Lote 04, Centro, Turvelândia - GO
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Turvelandia</h4>
+                    <p class="text-gray-700">Rua Maria Moreira Nascimento, Quadra 09, Lote 04, Centro, Turvelandia - GO
                     </p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone/Whatsapp: (64) 9 3642-1223</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">UPA 1 Luziânia</h4>
-                    <p class="text-gray-700">Rua Portugal, nº 1, Jardim Ingá, Luziânia - GO, CEP 72852-320</p>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">UPA 1 Luziania</h4>
+                    <p class="text-gray-700">Rua Portugal, n 1, Jardim Inga, Luziania - GO, CEP 72852-320</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">UPA 2 Luziânia</h4>
-                    <p class="text-gray-700">Rua Joaquim Nabuco, Parque Estrela Dalva II, Luziânia - GO, CEP 72804-370
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">UPA 2 Luziania</h4>
+                    <p class="text-gray-700">Rua Joaquim Nabuco, Parque Estrela Dalva II, Luziania - GO, CEP 72804-370
                     </p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
@@ -369,26 +478,141 @@
                     <p class="text-gray-700">Via 26 A, Setor Sul, Formosa - GO, CEP 73802-005</p>
                 </article>
                 <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Valparaíso</h4>
-                    <p class="text-gray-700">Rua 03, Quadra 10, Lote 05, Lojas 01 e 02, Parque Rio Branco, Valparaíso -
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Valparaiso</h4>
+                    <p class="text-gray-700">Rua 03, Quadra 10, Lote 05, Lojas 01 e 02, Parque Rio Branco, Valparaiso -
                         GO, CEP 72870-010</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (61) 9285-2738</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="GO">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital Estadual de Formosa</h4>
+                    <p class="text-gray-700">Av. Maestro Joao Luiz do Espirito Santo - Parque Laguna II, Formosa - GO,
+                        CEP 73814-005</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (61) 3770-0176</p>
+                </article>
+
+                <!-- MT -->
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Agua Boa</h4>
+                    <p class="text-gray-700">Rua 03, n 955, Centro II, Agua Boa - MT, CEP 78635-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 99951-9569</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Canarana</h4>
+                    <p class="text-gray-700">Av. Parana, n 133, Setor Central, Canarana - MT, CEP 78640-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 99620-1303</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Cocalinho</h4>
+                    <p class="text-gray-700">Rua Alceu Bezerra Vilarins, S/N, Cocalinho - MT, CEP 78680-000</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital Regional Confresa</h4>
+                    <p class="text-gray-700">Rua Mato Grosso, n 93, Centro, Confresa - MT, CEP 78652-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 99914-671</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Clinica Sirius - Agua Boa</h4>
+                    <p class="text-gray-700">Rua 03, n 1.074, Centro II, Agua Boa - MT, CEP 78635-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 98432-3091</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Campinapolis</h4>
+                    <p class="text-gray-700">Rua Bandeirantes, S/N, Cristalino, Campinapolis - MT, CEP 78630-000</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Espigao do Leste</h4>
+                    <p class="text-gray-700">Av. Espigao do Leste, Distrito, Sao Felix do Araguaia - MT, CEP 78673-000
+                    </p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 98111-8285</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Hospital Municipal de Canarana</h4>
+                    <p class="text-gray-700">Av. Santa Catarina, S/N, Setor Central, Canarana - MT, CEP 78640-000</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Nova Nazare</h4>
+                    <p class="text-gray-700">Rua Cleuza Borba Maciel, S/N, Setor Sul, Nova Nazare - MT, CEP 78638-000
+                    </p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Laboratorio Municipal Paranatinga</h4>
+                    <p class="text-gray-700">Rua Osvaldo Candido Pereira, S/N, Setor Central, Paranatinga - MT, CEP
+                        78870-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Whatsapp: (66) 9 9271-6968</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">PSF Paranatinga</h4>
+                    <p class="text-gray-700">Rua Rondonia, ESF 7, Santiago do Norte, Paranatinga - MT, CEP 78874-600</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Querencia</h4>
+                    <p class="text-gray-700">Avenida Norte, n 908, Sala 3/4, Expansao Urbana, Querencia - MT, CEP
+                        78643-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 99261-7469</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Sao Jose do Povo</h4>
+                    <p class="text-gray-700">Rua Candido Borges Leal, n 1030, Centro, Sao Jose do Povo - MT, CEP
+                        78773-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 99615-5549</p>
+                </article>
+                <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100" data-estado="MT">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Tesouro</h4>
+                    <p class="text-gray-700">Rua Dr. Humberto Marcilio, n 158, Centro, Tesouro - MT, CEP 78775-000</p>
+                    <p class="text-sm text-gray-500 mt-2">Telefone: (66) 9907-6472</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- Contato -->
+    <section id="contato" class="py-16 text-center bg-brand-soft">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-4 text-brand">Fale Conosco</h3>
+            <p class="text-gray-600 mb-8">Entre em contato para agendamentos, duvidas e informacoes.</p>
+
+            <div class="space-y-2 text-gray-700 mb-8">
+                <p class="text-lg">Av. Paranaiba, 1323 - St. Central, Goiania - GO, 74025-010</p>
+                <p class="text-lg">Telefones: (62) 3213-6888 / (62) 9 99312-6354</p>
+                <a href="https://wa.me/5562993126354" target="_blank"
+                    class="inline-block text-brand font-semibold hover-brand">
+                    Atendimento via WhatsApp
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-left">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">E-mail institucional</h4>
+                    <p class="text-gray-700 mb-4">Envie sua mensagem diretamente para nossa equipe.</p>
+                    <a href="mailto:contato@laboratorioprevencao.com.br"
+                        class="inline-block bg-brand hover-bg-brand-dark text-white px-5 py-3 rounded-lg font-semibold shadow">
+                        contato@laboratorioprevencao.com.br
+                    </a>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-left">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Trabalhe conosco</h4>
+                    <p class="text-gray-700 mb-4">Envie seu curriculo e faca parte da nossa equipe.</p>
+                    <a href="mailto:rh@laboratorioprevencao.com.br?subject=Trabalhe%20conosco"
+                        class="inline-block bg-gray-900 hover:bg-black text-white px-5 py-3 rounded-lg font-semibold shadow">
+                        rh@laboratorioprevencao.com.br
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodape -->
     <footer class="bg-brand text-white py-6 text-center">
-        <p>© 2025 Laboratório Prevenção. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Laboratorio Prevencao. Todos os direitos reservados.</p>
     </footer>
 
     <script>
         (function () {
-            const toggleButton = document.getElementById('toggle-estado');
+            const buttons = document.querySelectorAll('[data-estado-btn]');
             const estadoAtualSpan = document.getElementById('estado-atual');
             const cards = document.querySelectorAll('#lista-unidades [data-estado]');
 
-            if (!toggleButton || !estadoAtualSpan || cards.length === 0) {
+            if (!buttons.length || !estadoAtualSpan || !cards.length) {
                 return;
             }
 
@@ -400,21 +624,29 @@
                     card.classList.toggle('hidden', !deveMostrar);
                 });
 
+                buttons.forEach((btn) => {
+                    const ativo = btn.getAttribute('data-estado-btn') === estadoAtual;
+                    btn.classList.toggle('bg-brand', ativo);
+                    btn.classList.toggle('text-white', ativo);
+                    btn.classList.toggle('border-brand', ativo);
+                    btn.classList.toggle('bg-white', !ativo);
+                    btn.classList.toggle('text-gray-700', !ativo);
+                    btn.classList.toggle('border-transparent', !ativo);
+                });
+
                 estadoAtualSpan.textContent = estadoAtual;
-                toggleButton.textContent = estadoAtual === 'GO'
-                    ? 'MATO GROSSO'
-                    : 'GOIÁS';
             };
 
-            toggleButton.addEventListener('click', () => {
-                estadoAtual = estadoAtual === 'GO' ? 'MT' : 'GO';
-                atualizarLista();
+            buttons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    estadoAtual = btn.getAttribute('data-estado-btn');
+                    atualizarLista();
+                });
             });
 
             atualizarLista();
         })();
     </script>
-
 </body>
 
 </html>

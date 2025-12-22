@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratório Prevenção - Exames</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #e3063c;
+            --brand-dark: #b0042c;
+            --brand-light: #fff1f5;
+            --brand-muted: #fde1ea;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .bg-brand {
+            background-color: var(--brand-primary) !important;
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark) !important;
+        }
+
+        .bg-brand-soft {
+            background-color: var(--brand-light);
+        }
+
+        .text-brand {
+            color: var(--brand-primary) !important;
+        }
+
+        .border-brand {
+            border-color: var(--brand-primary) !important;
+        }
+
+        .hover-brand:hover {
+            color: var(--brand-primary) !important;
+        }
+
+        .hover-bg-brand-dark:hover {
+            background-color: var(--brand-dark) !important;
+        }
+
+        .hover-border-brand:hover {
+            border-color: var(--brand-primary) !important;
+        }
+
+        .brand-accent-bar {
+            background-color: var(--brand-primary);
+        }
+
+        .brand-dot {
+            color: var(--brand-primary);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <header class="bg-white shadow fixed w-full z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center gap-3">
+                <img src="prevencao-lab-logo.png" alt="Laboratório Prevenção" class="h-12 w-auto object-contain" />
+                <div>
+                    <p class="text-sm text-gray-500">Laboratório de Citopatologia e Patologia de Goiânia</p>
+                    <h1 class="text-2xl font-bold text-brand leading-tight">Laboratório Prevenção</h1>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <nav class="space-x-4 md:space-x-6 text-sm font-medium text-gray-700">
+                    <a href="index.html" class="hover-brand">Início</a>
+                    <a href="resultados.html" class="hover-brand">Resultados</a>
+                    <a href="exames.html" class="hover-brand">Exames</a>
+                    <a href="sobre.html" class="hover-brand">Quem somos</a>
+                    <a href="unidades.html" class="hover-brand">Unidades</a>
+                    <a href="parcerias.html" class="hover-brand">Parcerias</a>
+                    <a href="contato.html" class="hover-brand">Contato</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-3 text-gray-500">
+                    <a href="https://www.facebook.com/laboratorioprevencao/" target="_blank" rel="noopener"
+                        class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
+                        aria-label="Facebook do Laboratório Prevenção">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M14 3h4a1 1 0 011 1v3h-3a2 2 0 00-2 2v2h4l-1 4h-3v7h-4v-7H8v-4h3V9a4 4 0 014-4z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/laboratorio_prevencao/" target="_blank" rel="noopener"
+                        class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
+                        aria-label="Instagram do Laboratório Prevenção">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm11 1a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 11-5 5 5 5 0 015-5zm0 2a3 3 0 103 3 3 3 0 00-3-3z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pt-28 pb-20 bg-brand-soft">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-3">Exames</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto">Precisão e confiança em cada resultado laboratorial. Conheça
+                        as áreas em que atuamos.</p>
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 3h6m-2 0v13m0 0a2 2 0 11-4 0V7m4 9a2 2 0 004 0V7m-8 5a2 2 0 01-4 0V7" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Análises clínicas</h3>
+                        <p class="text-gray-600">Precisão e confiança em cada resultado laboratorial.</p>
+                    </article>
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 9.75L4.5 4.5m0 0l2.25-2.25m-2.25 2.25l2.25 2.25M14.25 14.25l5.25 5.25m0 0l-2.25 2.25m2.25-2.25l-2.25-2.25M9 10.5h6m-6 3h6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Anatomia patológica</h3>
+                        <p class="text-gray-600">Diagnósticos seguros por meio da análise histológica de tecidos.</p>
+                    </article>
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6v12m6-6H6m10-4a2 2 0 10-4 0 2 2 0 004 0zm-6 8a2 2 0 104 0 2 2 0 00-4 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Citologia</h3>
+                        <p class="text-gray-600">Avaliação celular detalhada para detecção precoce de alterações.</p>
+                    </article>
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 5a2.25 2.25 0 014.5 0v6a2.25 2.25 0 01-4.5 0V5zM5.25 13.5a2.25 2.25 0 014.5 0v2.25a2.25 2.25 0 01-4.5 0V13.5zM14.25 12a2.25 2.25 0 014.5 0v5.25a2.25 2.25 0 01-4.5 0V12z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Toxicologia</h3>
+                        <p class="text-gray-600">Identificação de substâncias e monitoramento da exposição química.</p>
+                    </article>
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 4c4 4 4 8 0 12m10-12c-4 4-4 8 0 12M7 4h10m-10 12h10" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Genética</h3>
+                        <p class="text-gray-600">Investigação de alterações genéticas para prevenção e diagnóstico
+                            personalizado.</p>
+                    </article>
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Biologia molecular</h3>
+                        <p class="text-gray-600">Tecnologia molecular a serviço do diagnóstico de alta sensibilidade.</p>
+                    </article>
+                </div>
+                <div class="mt-10 text-center text-gray-600">
+                    <p>Precisa de um exame específico? Entre em contato e orientamos o melhor encaminhamento.</p>
+                    <a href="contato.html" class="inline-flex items-center justify-center mt-4 px-5 py-3 rounded-lg bg-brand hover-bg-brand-dark text-white font-semibold shadow">Fale com nossa equipe</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand text-white py-6 text-center">
+        <p>&copy; 2025 Laboratório Prevenção. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

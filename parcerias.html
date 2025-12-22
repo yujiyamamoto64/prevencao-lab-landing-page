@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratório Prevenção - Parcerias</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #e3063c;
+            --brand-dark: #b0042c;
+            --brand-light: #fff1f5;
+            --brand-muted: #fde1ea;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .bg-brand {
+            background-color: var(--brand-primary) !important;
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark) !important;
+        }
+
+        .bg-brand-soft {
+            background-color: var(--brand-light);
+        }
+
+        .text-brand {
+            color: var(--brand-primary) !important;
+        }
+
+        .border-brand {
+            border-color: var(--brand-primary) !important;
+        }
+
+        .hover-brand:hover {
+            color: var(--brand-primary) !important;
+        }
+
+        .hover-bg-brand-dark:hover {
+            background-color: var(--brand-dark) !important;
+        }
+
+        .hover-border-brand:hover {
+            border-color: var(--brand-primary) !important;
+        }
+
+        .brand-accent-bar {
+            background-color: var(--brand-primary);
+        }
+
+        .brand-dot {
+            color: var(--brand-primary);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <header class="bg-white shadow fixed w-full z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center gap-3">
+                <img src="prevencao-lab-logo.png" alt="Laboratório Prevenção" class="h-12 w-auto object-contain" />
+                <div>
+                    <p class="text-sm text-gray-500">Laboratório de Citopatologia e Patologia de Goiânia</p>
+                    <h1 class="text-2xl font-bold text-brand leading-tight">Laboratório Prevenção</h1>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <nav class="space-x-4 md:space-x-6 text-sm font-medium text-gray-700">
+                    <a href="index.html" class="hover-brand">Início</a>
+                    <a href="resultados.html" class="hover-brand">Resultados</a>
+                    <a href="exames.html" class="hover-brand">Exames</a>
+                    <a href="sobre.html" class="hover-brand">Quem somos</a>
+                    <a href="unidades.html" class="hover-brand">Unidades</a>
+                    <a href="parcerias.html" class="hover-brand">Parcerias</a>
+                    <a href="contato.html" class="hover-brand">Contato</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-3 text-gray-500">
+                    <a href="https://www.facebook.com/laboratorioprevencao/" target="_blank" rel="noopener"
+                        class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
+                        aria-label="Facebook do Laboratório Prevenção">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M14 3h4a1 1 0 011 1v3h-3a2 2 0 00-2 2v2h4l-1 4h-3v7h-4v-7H8v-4h3V9a4 4 0 014-4z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/laboratorio_prevencao/" target="_blank" rel="noopener"
+                        class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
+                        aria-label="Instagram do Laboratório Prevenção">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm11 1a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 11-5 5 5 5 0 015-5zm0 2a3 3 0 103 3 3 3 0 00-3-3z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pt-28 pb-20 bg-brand-soft">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-3">Parcerias</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto">Colaboração com unidades públicas, convênios e clínicas para
+                        levar diagnóstico laboratorial de excelência.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Unidades públicas</h3>
+                        <p class="text-gray-700 mb-4">Colaboração com prefeituras, secretarias de saúde e unidades públicas,
+                            levando diagnóstico laboratorial de excelência ao sistema SUS.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>Prefeitura de Aragarças (GO) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Formosa (GO) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Goiânia (GO) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Luziânia (GO) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Cidade Ocidental (GO) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Cocalinho (MT) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Campinápolis (MT) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Canarana (MT) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Nova Nazaré (MT) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Paranatinga (MT) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de São José do Povo (MT) - Secretaria Municipal de Saúde</li>
+                            <li>Prefeitura de Tesouro (MT) - Secretaria Municipal de Saúde</li>
+                        </ul>
+                    </article>
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Convênios e Instituições Privadas</h3>
+                        <p class="text-gray-700 mb-4">Convênios da empresa - lista completa e sem repetições.</p>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-2">SUS</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
+                                    <span>SUS Querência</span>
+                                    <span>SUS Campinápolis</span>
+                                    <span>SUS Cocalinho</span>
+                                    <span>SUS Espigão do Leste</span>
+                                    <span>SUS Paranatinga</span>
+                                    <span>SUS Canarana</span>
+                                    <span>SUS Goiânia</span>
+                                    <span>SUS Luziânia</span>
+                                    <span>SUS Formosa</span>
+                                    <span>SUS São José do Povo</span>
+                                    <span>SUS Água Boa</span>
+                                    <span>SUS Aragarças</span>
+                                    <span>SUS Cidade Ocidental</span>
+                                    <span>SUS Nova Nazaré</span>
+                                    <span>SUS Valparaíso</span>
+                                    <span>SUS Tesouro</span>
+                                    <span>SUS Turvelândia</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-2">Convênios e Clínicas</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
+                                    <span>CASSI Saúde</span>
+                                    <span>Clínica Araguaia</span>
+                                    <span>Clínica do Trabalho</span>
+                                    <span>Clínica Santa Luzia</span>
+                                    <span>Máxima Ocupacional</span>
+                                    <span>KATO</span>
+                                    <span>SGPREV</span>
+                                    <span>Casa do Índio - Querência</span>
+                                    <span>Unimed MT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Seja um parceiro</h3>
+                        <p class="text-gray-700 mb-6">
+                            Deseja firmar uma parceria com o nosso laboratório? Entre em contato e descubra como podemos
+                            construir juntos um modelo de diagnóstico eficiente e acessível.
+                        </p>
+                        <a href="contato.html"
+                            class="inline-flex items-center justify-center gap-2 bg-brand hover-bg-brand-dark text-white px-5 py-3 rounded-lg font-semibold shadow">
+                            Falar com o time de parcerias
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 3.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-8.5 8.5a1 1 0 01-.5.263l-5 1a1 1 0 01-1.183-1.184l1-5a1 1 0 01.263-.5l8.5-8.5zM11 6l3 3"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand text-white py-6 text-center">
+        <p>&copy; 2025 Laboratório Prevenção. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

@@ -216,7 +216,7 @@
 
 <body class="bg-white text-gray-800">
 
-    <header class="bg-white shadow fixed w-full z-50">
+        <header class="bg-white shadow fixed w-full z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
             <div class="flex items-center gap-3">
                 <img src="prevencao-lab-logo.png" alt="Laboratório Prevenção" class="h-12 w-auto object-contain" />
@@ -225,8 +225,8 @@
                     <h1 class="text-2xl font-bold text-brand leading-tight">Laboratório Prevenção</h1>
                 </div>
             </div>
-            <div class="flex items-center gap-6">
-                <nav class="space-x-4 md:space-x-6 text-sm font-medium text-gray-700">
+            <div class="flex items-center gap-4">
+                <nav class="hidden md:flex space-x-4 md:space-x-6 text-sm font-medium text-gray-700">
                     <a href="index.html" class="hover-brand">Início</a>
                     <a href="resultados.html" class="hover-brand">Resultados</a>
                     <a href="exames.html" class="hover-brand">Exames</a>
@@ -252,7 +252,50 @@
                         </svg>
                     </a>
                 </div>
+                <button id="menu-button"
+                    class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-gray-200 text-gray-600 hover-brand hover-border-brand transition"
+                    type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+                    <svg data-icon="open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                    <svg data-icon="close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
             </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white">
+            <nav class="px-6 py-4 grid gap-3 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover-brand">Início</a>
+                <a href="resultados.html" class="hover-brand">Resultados</a>
+                <a href="exames.html" class="hover-brand">Exames</a>
+                <a href="sobre.html" class="hover-brand">Quem somos</a>
+                <a href="unidades.html" class="hover-brand">Unidades</a>
+                <a href="parcerias.html" class="hover-brand">Parcerias</a>
+                <a href="contato.html" class="hover-brand">Contato</a>
+                <div class="flex items-center gap-3 pt-2 text-gray-500">
+                    <a href="https://www.facebook.com/laboratorioprevencao/" target="_blank" rel="noopener"
+                        class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
+                        aria-label="Facebook do Laboratório Prevenção">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M14 3h4a1 1 0 011 1v3h-3a2 2 0 00-2 2v2h4l-1 4h-3v7h-4v-7H8v-4h3V9a4 4 0 014-4z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/laboratorio_prevencao/" target="_blank" rel="noopener"
+                        class="p-2 border border-gray-200 rounded-full hover-brand hover-border-brand transition"
+                        aria-label="Instagram do Laboratório Prevenção">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm11 1a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 11-5 5 5 5 0 015-5zm0 2a3 3 0 103 3 3 3 0 00-3-3z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
         </div>
     </header>
 
@@ -345,6 +388,36 @@
     <footer class="bg-brand text-white py-6 text-center">
         <p>&copy; 2025 Laboratório Prevenção. Todos os direitos reservados.</p>
     </footer>
+    <script>
+        (function () {
+            var button = document.getElementById('menu-button');
+            var menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            var openIcon = button.querySelector('[data-icon="open"]');
+            var closeIcon = button.querySelector('[data-icon="close"]');
+
+            function setMenuState(isOpen) {
+                menu.classList.toggle('hidden', !isOpen);
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+                if (openIcon && closeIcon) {
+                    openIcon.classList.toggle('hidden', isOpen);
+                    closeIcon.classList.toggle('hidden', !isOpen);
+                }
+            }
+
+            button.addEventListener('click', function () {
+                var isOpen = button.getAttribute('aria-expanded') === 'true';
+                setMenuState(!isOpen);
+            });
+
+            menu.addEventListener('click', function (event) {
+                if (event.target.closest('a')) {
+                    setMenuState(false);
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>

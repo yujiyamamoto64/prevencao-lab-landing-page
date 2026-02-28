@@ -354,11 +354,109 @@
         (function () {
             const buttons = document.querySelectorAll('[data-estado-btn]');
             const estadoAtualSpan = document.getElementById('estado-atual');
-            const cards = document.querySelectorAll('#lista-unidades [data-estado]');
+            const listaUnidades = document.getElementById('lista-unidades');
+            const cards = listaUnidades ? Array.from(listaUnidades.querySelectorAll('[data-estado]')) : [];
 
             if (!buttons.length || !estadoAtualSpan || !cards.length) {
                 return;
             }
+
+            const populationByCityKey = {
+                GO: {
+                    GOIANIA: 1437366,
+                    LUZIANIA: 209129,
+                    VALPARAISO: 198861,
+                    FORMOSA: 115901,
+                    CIDADE_OCIDENTAL: 91767,
+                    ARAGARCAS: 18390,
+                    TURVELANDIA: 4985
+                },
+                MT: {
+                    CONFRESA: 35075,
+                    AGUA_BOA: 29219,
+                    QUERENCIA: 26769,
+                    PARANATINGA: 26423,
+                    CANARANA: 25858,
+                    CAMPINAPOLIS: 15347,
+                    SAO_FELIX_DO_ARAGUAIA: 13621,
+                    COCALINHO: 6220,
+                    NOVA_NAZARE: 4200,
+                    TESOURO: 3025,
+                    SAO_JOSE_DO_POVO: 2875
+                }
+            };
+
+            const cityMatchers = {
+                GO: [
+                    { key: 'GOIANIA', regex: /goi.{0,3}nia/i },
+                    { key: 'LUZIANIA', regex: /luzi.{0,3}nia/i },
+                    { key: 'VALPARAISO', regex: /valpara.{0,4}so/i },
+                    { key: 'FORMOSA', regex: /formosa/i },
+                    { key: 'CIDADE_OCIDENTAL', regex: /cidade ocidental/i },
+                    { key: 'ARAGARCAS', regex: /aragar.{0,4}as/i },
+                    { key: 'TURVELANDIA', regex: /turvel.{0,4}ndia/i }
+                ],
+                MT: [
+                    { key: 'CONFRESA', regex: /confresa/i },
+                    { key: 'AGUA_BOA', regex: /(agua boa|gua boa)/i },
+                    { key: 'QUERENCIA', regex: /quer.{0,4}ncia/i },
+                    { key: 'PARANATINGA', regex: /paranatinga/i },
+                    { key: 'CANARANA', regex: /canarana/i },
+                    { key: 'CAMPINAPOLIS', regex: /campin.{0,4}polis/i },
+                    { key: 'SAO_FELIX_DO_ARAGUAIA', regex: /s.{0,3}o f.{0,3}lix do araguaia/i },
+                    { key: 'COCALINHO', regex: /cocalinho/i },
+                    { key: 'NOVA_NAZARE', regex: /nova nazar.{0,3}/i },
+                    { key: 'TESOURO', regex: /tesouro/i },
+                    { key: 'SAO_JOSE_DO_POVO', regex: /s.{0,3}o jos.{0,3} do povo/i }
+                ]
+            };
+
+            const getCityKey = (card, estado) => {
+                if (!estado) return '';
+                const text = card.textContent || '';
+                const matchers = cityMatchers[estado] || [];
+                const found = matchers.find((matcher) => matcher.regex.test(text));
+                return found ? found.key : '';
+            };
+
+            const getPopulation = (card) => {
+                const estado = card.getAttribute('data-estado');
+                const cityKey = getCityKey(card, estado);
+                if (!estado || !cityKey) return -1;
+                return populationByCityKey[estado] && populationByCityKey[estado][cityKey]
+                    ? populationByCityKey[estado][cityKey]
+                    : -1;
+            };
+
+            const sortedCards = cards
+                .map((card, index) => ({ card, index }))
+                .sort((a, b) => {
+                    const estadoA = a.card.getAttribute('data-estado') || '';
+                    const estadoB = b.card.getAttribute('data-estado') || '';
+
+                    if (estadoA !== estadoB) {
+                        return estadoA.localeCompare(estadoB, 'pt-BR');
+                    }
+
+                    const popA = getPopulation(a.card);
+                    const popB = getPopulation(b.card);
+                    if (popA !== popB) {
+                        return popB - popA;
+                    }
+
+                    const cityKeyA = getCityKey(a.card, estadoA);
+                    const cityKeyB = getCityKey(b.card, estadoB);
+                    if (cityKeyA !== cityKeyB) {
+                        return cityKeyA.localeCompare(cityKeyB, 'pt-BR');
+                    }
+
+                    return a.index - b.index;
+                })
+                .map((entry) => entry.card);
+
+            sortedCards.forEach((card) => {
+                listaUnidades.appendChild(card);
+            });
 
             let estadoAtual = 'GO';
 

@@ -61,6 +61,27 @@
         .brand-dot {
             color: var(--brand-primary);
         }
+
+        .exam-icon-wrap {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.95rem;
+            background: linear-gradient(145deg, #fff7fa 0%, #ffe8ef 100%);
+            border: 1px solid #f7c9d7;
+            color: var(--brand-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(227, 6, 60, 0.14);
+        }
+
+        .exam-icon {
+            width: 1.55rem;
+            height: 1.55rem;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
     </style>
 </head>
 
@@ -158,55 +179,64 @@
                 </div>
                 <div class="grid gap-6 md:grid-cols-3">
                     <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 3h6m-2 0v13m0 0a2 2 0 11-4 0V7m4 9a2 2 0 004 0V7m-8 5a2 2 0 01-4 0V7" />
+                        <div class="exam-icon-wrap mb-4">
+                            <svg class="exam-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                                <path d="M9 3h6" />
+                                <path d="M10 3v5l-3.5 5.8A4 4 0 0 0 9.9 20h4.2a4 4 0 0 0 3.4-6.2L14 8V3" />
+                                <path d="M8.5 13h7" />
+                                <circle cx="10.2" cy="16.1" r="0.9" fill="currentColor" stroke="none" />
+                                <circle cx="13.4" cy="14.8" r="0.9" fill="currentColor" stroke="none" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Análises clínicas</h3>
                         <p class="text-gray-600">Precisão e confiança em cada resultado laboratorial.</p>
                     </article>
                     <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.75 9.75L4.5 4.5m0 0l2.25-2.25m-2.25 2.25l2.25 2.25M14.25 14.25l5.25 5.25m0 0l-2.25 2.25m2.25-2.25l-2.25-2.25M9 10.5h6m-6 3h6" />
+                        <div class="exam-icon-wrap mb-4">
+                            <svg class="exam-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                                <rect x="4" y="5.5" width="16" height="12" rx="2.4" />
+                                <path d="M8 9.5h8" />
+                                <path d="M8 13h5" />
+                                <circle cx="16.4" cy="13.2" r="1.6" />
+                                <path d="M7 20h10" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Anatomia patológica</h3>
                         <p class="text-gray-600">Diagnósticos seguros por meio da análise histológica de tecidos.</p>
                     </article>
                     <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 6v12m6-6H6m10-4a2 2 0 10-4 0 2 2 0 004 0zm-6 8a2 2 0 104 0 2 2 0 00-4 0z" />
+                        <div class="exam-icon-wrap mb-4">
+                            <svg class="exam-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                                <circle cx="8" cy="8.5" r="2.8" />
+                                <circle cx="16.2" cy="9.2" r="2.4" />
+                                <circle cx="12" cy="16.2" r="3.4" />
+                                <circle cx="8" cy="8.5" r="0.9" fill="currentColor" stroke="none" />
+                                <circle cx="16.2" cy="9.2" r="0.8" fill="currentColor" stroke="none" />
+                                <circle cx="12" cy="16.2" r="1.1" fill="currentColor" stroke="none" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Citologia</h3>
                         <p class="text-gray-600">Avaliação celular detalhada para detecção precoce de alterações.</p>
                     </article>
                     <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.75 5a2.25 2.25 0 014.5 0v6a2.25 2.25 0 01-4.5 0V5zM5.25 13.5a2.25 2.25 0 014.5 0v2.25a2.25 2.25 0 01-4.5 0V13.5zM14.25 12a2.25 2.25 0 014.5 0v5.25a2.25 2.25 0 01-4.5 0V12z" />
+                        <div class="exam-icon-wrap mb-4">
+                            <svg class="exam-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                                <path d="M12 3l7 3v4.8c0 4.3-2.6 7.5-7 10.2-4.4-2.7-7-5.9-7-10.2V6z" />
+                                <path d="M12 8.5v5.1" />
+                                <circle cx="12" cy="16.5" r="1" fill="currentColor" stroke="none" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Toxicologia</h3>
                         <p class="text-gray-600">Identificação de substâncias e monitoramento da exposição química.</p>
                     </article>
                     <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M7 4c4 4 4 8 0 12m10-12c-4 4-4 8 0 12M7 4h10m-10 12h10" />
+                        <div class="exam-icon-wrap mb-4">
+                            <svg class="exam-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                                <path d="M8 4c4 0 8 4 8 8s-4 8-8 8" />
+                                <path d="M16 4c-4 0-8 4-8 8s4 8 8 8" />
+                                <path d="M9 7h6" />
+                                <path d="M9 12h6" />
+                                <path d="M9 17h6" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Genética</h3>
@@ -214,11 +244,14 @@
                             personalizado.</p>
                     </article>
                     <article class="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-brand-soft text-brand flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <div class="exam-icon-wrap mb-4">
+                            <svg class="exam-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                                <circle cx="6.3" cy="12" r="2" />
+                                <circle cx="17.4" cy="8" r="2" />
+                                <circle cx="17.4" cy="16.2" r="2" />
+                                <path d="M8.3 12h7.1" />
+                                <path d="M15.7 9.5l-5.3 2.5" />
+                                <path d="M15.7 14.7l-5.3-2.7" />
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Biologia molecular</h3>

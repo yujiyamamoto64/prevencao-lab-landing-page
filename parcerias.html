@@ -161,7 +161,7 @@
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Unidades públicas</h3>
                         <p class="text-gray-700 mb-4">Colaboração com prefeituras, secretarias de saúde e unidades públicas,
                             levando diagnóstico laboratorial de excelência ao sistema SUS.</p>
-                        <ul class="space-y-2 text-gray-700">
+                        <ul id="lista-parcerias-publicas" class="space-y-2 text-gray-700">
                             <li>Prefeitura de Aragarças (GO) - Secretaria Municipal de Saúde</li>
                             <li>Prefeitura de Formosa (GO) - Secretaria Municipal de Saúde</li>
                             <li>Prefeitura de Goiânia (GO) - Secretaria Municipal de Saúde</li>
@@ -182,7 +182,7 @@
                         <div class="space-y-3">
                             <div>
                                 <p class="font-semibold text-gray-900 mb-2">SUS</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
+                                <div id="lista-convenios-sus" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
                                     <span>SUS Querência</span>
                                     <span>SUS Campinápolis</span>
                                     <span>SUS Cocalinho</span>
@@ -256,6 +256,87 @@
             </div>
         </div>
     </footer>
+    <script>
+        (function () {
+            const cityPopulation = {
+                GOIANIA: 1437366,
+                LUZIANIA: 209129,
+                VALPARAISO: 198861,
+                FORMOSA: 115901,
+                CIDADE_OCIDENTAL: 91767,
+                AGUA_BOA: 29219,
+                QUERENCIA: 26769,
+                PARANATINGA: 26423,
+                CANARANA: 25858,
+                ARAGARCAS: 18390,
+                CAMPINAPOLIS: 15347,
+                SAO_FELIX_DO_ARAGUAIA: 13621,
+                COCALINHO: 6220,
+                TURVELANDIA: 4985,
+                NOVA_NAZARE: 4200,
+                TESOURO: 3025,
+                SAO_JOSE_DO_POVO: 2875
+            };
+
+            const cityMatchers = [
+                { key: 'GOIANIA', regex: /goi.{0,3}nia/i },
+                { key: 'LUZIANIA', regex: /luzi.{0,3}nia/i },
+                { key: 'VALPARAISO', regex: /valpara.{0,4}so/i },
+                { key: 'FORMOSA', regex: /formosa/i },
+                { key: 'CIDADE_OCIDENTAL', regex: /cidade ocidental/i },
+                { key: 'AGUA_BOA', regex: /(agua boa|gua boa)/i },
+                { key: 'QUERENCIA', regex: /quer.{0,4}ncia/i },
+                { key: 'PARANATINGA', regex: /paranatinga/i },
+                { key: 'CANARANA', regex: /canarana/i },
+                { key: 'ARAGARCAS', regex: /aragar.{0,4}as/i },
+                { key: 'CAMPINAPOLIS', regex: /campin.{0,4}polis/i },
+                { key: 'SAO_FELIX_DO_ARAGUAIA', regex: /(s.{0,3}o f.{0,3}lix do araguaia|espig.{0,3}o do leste)/i },
+                { key: 'COCALINHO', regex: /cocalinho/i },
+                { key: 'TURVELANDIA', regex: /turvel.{0,4}ndia/i },
+                { key: 'NOVA_NAZARE', regex: /nova nazar.{0,3}/i },
+                { key: 'TESOURO', regex: /tesouro/i },
+                { key: 'SAO_JOSE_DO_POVO', regex: /s.{0,3}o jos.{0,3} do povo/i }
+            ];
+
+            const getCityKey = (text) => {
+                const value = text || '';
+                const found = cityMatchers.find((matcher) => matcher.regex.test(value));
+                return found ? found.key : '';
+            };
+
+            const sortByPopulation = (elements) => {
+                const items = Array.from(elements).map((element, index) => {
+                    const cityKey = getCityKey(element.textContent);
+                    const population = cityPopulation[cityKey] || -1;
+                    return { element, index, cityKey, population };
+                });
+
+                items.sort((a, b) => {
+                    if (a.population !== b.population) {
+                        return b.population - a.population;
+                    }
+                    if (a.cityKey !== b.cityKey) {
+                        return a.cityKey.localeCompare(b.cityKey, 'pt-BR');
+                    }
+                    return a.index - b.index;
+                });
+
+                items.forEach((item) => {
+                    item.element.parentElement.appendChild(item.element);
+                });
+            };
+
+            const publicList = document.getElementById('lista-parcerias-publicas');
+            if (publicList) {
+                sortByPopulation(publicList.querySelectorAll('li'));
+            }
+
+            const susList = document.getElementById('lista-convenios-sus');
+            if (susList) {
+                sortByPopulation(susList.querySelectorAll('span'));
+            }
+        })();
+    </script>
     <script>
         (function () {
             var button = document.getElementById('menu-button');
